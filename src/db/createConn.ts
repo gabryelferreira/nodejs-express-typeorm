@@ -8,7 +8,7 @@ export async function createConn() {
             type: "sqlite",
             database: "express.db",
             entities: [
-                path.resolve(__dirname, "..", "entity") + "/*.ts"
+                path.resolve(__dirname, "..", "entity") + "/*{.ts,.js}"
             ],
             migrationsTableName: "custom_migration",
             migrations: ["./migrations/*.ts"],
