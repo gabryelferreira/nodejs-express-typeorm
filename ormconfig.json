@@ -1,0 +1,10 @@
+{
+    "type": "sqlite",
+    "database": "express.db",
+    "entities": ["src/entity/*.ts"],
+    "migrationsTableName": "custom_migration",
+    "migrations": ["src/db/migrations/*.ts"],
+    "cli": {
+        "migrationsDir": "src/db/migrations"
+    }
+}
