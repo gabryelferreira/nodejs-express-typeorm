@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/server.ts",
+    "build": "rimraf ./build && tsc",
     "typeorm": "ts-node ./node_modules/.bin/typeorm"
   },
   "keywords": [],
