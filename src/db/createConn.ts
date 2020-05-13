@@ -11,7 +11,9 @@ export async function createConn() {
                 path.resolve(__dirname, "..", "entity") + "/*{.ts,.js}"
             ],
             migrationsTableName: "custom_migration",
-            migrations: ["./migrations/*.ts"],
+            migrations: [
+                "./migrations/*{.ts,.js}"
+            ],
             cli: {
                 migrationsDir: "./migrations"
             }

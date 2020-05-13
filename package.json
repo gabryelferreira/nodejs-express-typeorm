@@ -1,11 +1,12 @@
 {
-  "name": "nodejs-express-typeorm",
+  "name": "typescript-express-typeorm",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/server.ts",
     "build": "rimraf ./build && tsc",
+    "start:dev": "nodemon src/server.ts",
+    "start:prod": "ts-node ./node_modules/.bin/typeorm migration:run --config ormconfig-prod.json && node build/server.js",
     "typeorm": "ts-node ./node_modules/.bin/typeorm"
   },
   "keywords": [],
